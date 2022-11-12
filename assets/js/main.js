@@ -74,6 +74,13 @@ const navLinks = $.querySelectorAll('.nav-links');
   }
 // Loader active
 let loader = $.querySelector(".loader");
-setTimeout(() => {
-    loader.classList.add("hide");
-}, 2000);
+if (loader) {
+
+    window.addEventListener('load', () => {
+
+      loader.remove()
+
+    });
+
+  }
+
